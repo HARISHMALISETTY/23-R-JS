@@ -89,13 +89,13 @@ var arr3=["a","b","c","d"];
 
 var z=arr3.pop() // it will pop out the last element from the array.
 
-console.log(z)
+// console.log(z)
 
 // pop will removes the last element from the array and returns the element which is popped out.
 
 var z1=arr3.pop();
 
-console.log(z1)
+// console.log(z1)
 
 
 //shift
@@ -104,7 +104,7 @@ var arr3=[1,2,3,4,5];
 
 var c1=arr3.shift();
 
-console.log(c1)
+// console.log(c1)
 
 //unshift
 
@@ -112,4 +112,33 @@ var arr4=["a","b","c",4,5,6,"hello"];
 
 var d1=arr4.unshift(4,2,1);
 
-console.log(d1)
+// console.log(d1);
+
+
+var arr=[1,2,3,4,5];
+
+
+// console.log(arr[8])
+
+
+// console.log(arr.at(-4))
+
+var x1=arr.at(-4) // here this method is returns/prints the value based on index(positive /negative). 
+
+console.log(x1)
+
+//methods---predefined and userdefined
+
+
+var x2=arr.push(4,5,6);// push method will modifies the existing array by adding elements at the end of the array 
+//and also it returns the updated length of the array.
+
+// console.log(x2,arr);
+
+var x3=arr.pop(); // pop method will removes element at the end of the array and returns the removed element .
+
+console.log(arr,x3);
+
+
+
+
