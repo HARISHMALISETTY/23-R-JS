@@ -68,3 +68,4 @@ console.log(x.length)
 // --------
 // for-in,for-of for arrays,strings and objects.Object
 // few methods in objects.
+// delete,keys,values and entries
