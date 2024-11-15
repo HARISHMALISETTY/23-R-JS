@@ -1,0 +1,85 @@
+<!-- what is DOM..?
+ 
+
+Document Object Model.
+
+
+
+DOM is a programming interface between js and webpage.
+
+
+we can do CRUD operations with the DOM interface using js.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="img1">
+    <p id="p1"></p>
+    <h1 class="c1" id="id1">hello</h1>
+    <h1 class="c1" id="id2">welcome</h1>
+    <h1 class="c2" id="id3">something</h1>
+    <div>
+      <p class="p1">paragraph</p>
+      <p>iam paragraph2</p>
+    </div>
+    <script>
+
+        let img1=document.getElementById("img1");
+        img1.setAttribute("src","../assets/car3.jpeg");
+        img1.setAttribute("height","100");
+        img1.style.borderRadius="25px";
+        img1.style.backgroundColor="orange";
+        img1.style.padding="25px";
+
+      // let e1=document.getElementById("id1");
+      // e1.innerHTML="<i>harish</i>";
+      // e1.style.color="green";
+      // e1.style.backgroundColor="red";
+
+      let cc = document.getElementsByClassName("c1");
+
+      cc[0].innerHTML += "KKKKKKK";
+      // cc[0].innerHTML="document object model";
+      // cc[1].innerHTML="javascript";
+      // cc[0].style.color="red";
+      // cc[1].style.color="orange";
+
+      let p1 = document.getElementsByClassName("p1");
+      p1[0].innerHTML = "hello world";
+      p1[0].style.color = "blue";
+      p1[0].style.backgroundColor = "yellow";
+
+      // document.write("hellooo")
+      // console.log(cc)
+
+      //   let q1 = document.querySelectorAll("div p");
+      //   console.log(q1);
+
+      // let x=document.body.getElementsByTagName("h1");
+      // // console.log(x[0].innerHTML,x[1].innerHTML,x[2].innerHTML);
+
+      // let y=document.body.getElementsByClassName("c2");
+      // // console.log(y[0].innerText,y[1].innerText)
+      // // console.log(y)
+
+      // let z=document.getElementById("id1");
+      // let z1=document.getElementById("id2");
+
+      // // console.log(z.innerText)
+    </script>
+  </body>
+</html>
+
+<!-- getElementsByTagname
+     getElemetnsByClassname
+     getElementById
+     queryselector
+     queryselectorall  -->

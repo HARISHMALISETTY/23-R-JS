@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   debugger;
+
+      //   function demo() {
+      //     console.log("hello");
+
+      //     function demo1() {
+      //       console.log("welcome");
+      //     }
+      //     demo1();
+      //   }
+
+      //   demo();
+
+      // function sample(a){
+      //     a()
+
+      //     // console.log(a)
+      // }
+
+      // sample(function demo(){console.log("hiii")})
+
+      // function demo(x){
+      //     x()
+      // }
+      // demo(sample)
+      // function sample(){
+      //     console.log("iam sample")
+      // }
+
+      function demo(x, y) {
+        x("hii");
+        y();
+        // console.log(y, z);
+      }
+
+      demo(
+        function sample(x) {
+          console.log(x,"iam sample");
+        },
+        function sample1() {
+          console.log("iam sample1");
+        }
+      );
+    </script>
+  </body>
+</html>
