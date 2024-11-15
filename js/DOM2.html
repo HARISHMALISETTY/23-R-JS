@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let div1 = document.createElement("div");
+      div1.style.height = "75vh";
+      div1.style.width = "80vw";
+      div1.style.border = "2px solid black";
+      document.body.appendChild(div1);
+      let name = document.createElement("h1");
+      name.innerHTML = "username";
+      div1.appendChild(name);
+
+      let image = document.createElement("img");
+      image.setAttribute("src", "../assets/car3.jpeg");
+
+      div1.append(image, "helooooooo");
+
+      let text1 = document.createElement("h1");
+
+      text1.innerHTML = "welcome";
+
+      div1.appendChild(text1);
+      let div2=document.createElement("div");
+      div2.style.height="75vh";
+      div2.style.width="80vw";
+      div2.style.border="2px solid black";
+
+      document.body.appendChild(div2);
+        let name2=document.createElement("h1");
+        name2.innerHTML="username2";
+        div2.appendChild(name2);
+        let image2=document.createElement("img");
+        image2.setAttribute("src","../assets/car3.jpeg");
+        div2.appendChild(image2);
+
+        let main_div=document.createElement("div");
+
+        main_div.appendChild(div1);
+        main_div.appendChild(div2);
+
+        document.body.appendChild(main_div);
+        main_div.style.display="flex";
+
+
+        // main_div.removeChild(div2);
+        // image.removeAttribute("src")
+        
+
+     
+     
+    </script>
+  </body>
+</html>
+
+<!-- 
+  createelement
+  append,appendchild
+  removechild
+  removeattribute
+-->

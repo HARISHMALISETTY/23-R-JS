@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="card">
+      <h1 id="h11"></h1>
+      <img id="img1" />
+      <p id="id_no"></p>
+      <p id="bg"></p>
+      <h2 id="mbno"></h2>
+    </div>
+    <script>
+      let id_card=document.getElementById("card");
+      id_card.style.backgroundColor="aqua";
+      id_card.style.width="50vw";
+      id_card.style.padding="35px"  
+      id_card.style.border="2px solid black"
+      let username = document.getElementById("h11");
+      username.innerHTML = "harish";
+      let profile_pic = document.getElementById("img1");
+      profile_pic.setAttribute("src", "../assets/car3.jpeg");
+      let id_no = document.getElementById("id_no");
+      id_no.innerHTML = "<h1>12345</h1>";
+      profile_pic.style.height = "150px";
+      profile_pic.style.borderRadius = "20%";
+      let bloog_grp = document.getElementById("bg");
+      bloog_grp.innerHTML = "<h1>b+ve</h1>";
+      let mb_no = document.getElementById("mbno");
+      mb_no.innerHTML = "9964517111";
+    </script>
+  </body>
+</html>
