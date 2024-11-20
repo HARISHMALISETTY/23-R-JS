@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="frm1" onsubmit="submission(event)">
+        <input type="text" id="ip1">
+        <input type="submit" value="submit ">        
+    </form>
+    <p id="p1"></p>
+
+
+    <script>
+
+        let form=document.getElementById("frm1");
+        let ip1=document.getElementById("ip1");
+
+        let p1=document.getElementById("p1");
+
+        function submission(e){
+            e.preventDefault()
+            p1.innerHTML=ip1.value;
+
+        }
+
+
+    </script>
+
+
+
+    
+
+    
+</body>
+</html>
