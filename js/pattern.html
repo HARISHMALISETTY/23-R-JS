@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form1" onsubmit="evaluation(event)">
+      <input type="text" id="ip1" />
+      <input type="button" value="1" onclick="input(event)" />
+      <input type="button" value="2" onclick="input(event)" />
+      <input type="button" value="+" onclick="input(event)" />
+      <input type="button" value="-" onclick="input(event)" />
+      <input type="button" value="*" onclick="input(event)" />
+      <input type="button" value="/" onclick="input(event)" />
+      <input type="button" value="%" onclick="input(event)" />
+      <input type="submit" />
+    </form>
+    <p id="op"></p>
+    <script>
+      let op = document.getElementById("op");
+      let form = document.getElementById("form1");
+      let display = document.getElementById("ip1");
+
+      const input = (event) => {
+        display.value += event.target.value;
+      };
+      const evaluation = (event) => {
+        event.preventDefault();
+        let res = eval(display.value);
+        display.value = res;
+      };
+
+      function pattern(event) {
+        event.preventDefault();
+        let ip1 = event.target.ip1.value;
+        let ip2 = event.target.ip2.value;
+
+        let str = " ";
+        for (i = 1; i <= ip1; i++) {
+          str += "*".repeat(i) + "<br>";
+        }
+
+        op.innerHTML = str;
+      }
+    </script>
+  </body>
+</html>
