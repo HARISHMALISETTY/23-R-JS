@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 3px solid black;
+        padding: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ggp" id="ggpr">
+      great grand parent
+      <div class="gp" id="gpr">
+        grand parent
+        <div class="pr" id="prr">
+          parent
+          <div class="ch" id="chl">child</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let chl = document.getElementById("chl");
+      let prr = document.getElementById("prr");
+      let gpr = document.getElementById("gpr");
+      let ggpr = document.getElementById("ggpr");
+
+      chl.addEventListener("click", (event) => {
+        // event.stopImmediatePropagation()
+        console.log("child is triggered");
+        // chl.style.backgroundColor = "red";
+      });
+      prr.addEventListener("click", (event) => {
+        // event.stopImmediatePropagation()
+        console.log("parent is triggered");
+        // prr.style.backgroundColor = "green";
+      },true);
+
+      gpr.addEventListener("click", (event) => {
+        // event.stopImmediatePropagation()
+        console.log("grand parent is triggered");
+        // gpr.style.backgroundColor = "yellow";
+      },true);
+
+      ggpr.addEventListener("click", (event) => {
+        // event.stopImmediatePropagation()
+        console.log("great grand parent is triggered");
+        // ggpr.style.backgroundColor = "blue";
+      },true);
+    </script>
+  </body>
+</html>
