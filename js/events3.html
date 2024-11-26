@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h1">helloo</h1>
+
+    <p id="p1">texttttt</p>
+
+    <script>
+      let h1 = document.getElementById("h1");
+      let p1 = document.getElementById("p1");
+
+      h1.addEventListener("click", function () {
+        h1.style.color = "red";
+      });
+
+      h1.addEventListener("mouseleave", () => {
+        h1.style.color = "black";
+      });
+
+      h1.addEventListener("mouseover", () => {
+        h1.style.color = "green";
+      });
+
+      h1.addEventListener("dblclick", () => {
+        h1.style.color = "blue";
+        p1.style.color = "red";
+      });
+    </script>
+  </body>
+</html>

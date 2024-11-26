@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="text"
+        onkeypress="ipPress(event)"
+        onkeyup="ipUp(event)"
+        onkeydown="ipDown(event)"
+        onmouseleave="ipLeave(event)"
+        onmouseover="ipHover(event)"
+        onfocus="ipFocus(event)"
+        onblur="ipBlur(event)"
+      />
+      <input type="text" onfocus="ipFocus(event)" onblur="ipBlur(event)" />
+      <input type="text" id="ip3" onfocus="ipFocus1()" onblur="ipBlur1()" />
+      <input type="submit" />
+    </form>
+
+    <p id="p1"></p>
+
+    <script>
+        document.write("helloo")
+
+        let p1=document.getElementById("p1")
+        
+        const ipUp=(event)=>{
+            let target=event.target;
+            target.style.backgroundColor="pink"
+            p1.innerHTML="key is up"
+        }
+
+        const ipDown=(event)=>{
+            p1.innerHTML=""
+            let target=event.target;
+            target.style.backgroundColor="yellow"
+        }
+
+    //   const ipPress = (event) => {
+    //     let target = event.target;
+    //     target.style.backgroundColor = "blue";
+    //   };
+      const ipLeave = (event) => {
+        let target = event.target;
+        target.style.backgroundColor = "white";
+      };
+
+      const ipHover = (event) => {
+        let target = event.target;
+        target.style.backgroundColor = "aqua";
+      };
+      let ip3 = document.getElementById("ip3");
+      const ipBlur1 = () => {
+        ip3.style.backgroundColor = "white";
+      };
+      const ipFocus1 = () => {
+        ip3.style.backgroundColor = "orange";
+      };
+      function ipFocus(event) {
+        let target = event.target;
+        target.style.backgroundColor = "green";
+        target.style.border = "5px solid red";
+      }
+
+      function ipBlur(event) {
+        let target = event.target;
+        target.style.backgroundColor = "white";
+        target.style.border = "1px solid black";
+      }
+
+      document.write("welcome")
+    </script>
+  </body>
+</html>
