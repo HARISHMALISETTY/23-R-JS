@@ -1,0 +1,35 @@
+<!-- BOM
+----
+BROWSER OBJECT MODEL, IS A COLLECTION OF OBJECTS THAT 
+REPRESENTS THE BROWSER WINDOW AND ITS COMPONENTS:
+
+1.DOCUMENT
+2.WINDOW
+3.LOCATION
+4.HISTORY
+5.NAVIGATOR
+6.SCREEN -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">click me</button>
+    <p id="p1">welcome</p>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let p1 = document.getElementById("p1");
+      btn.addEventListener("click", () => {
+        let cnfrmtn = window.confirm("are you sure");
+        if (cnfrmtn) {
+          p1.innerHTML = "";
+        }
+      });
+    </script>
+  </body>
+</html>
