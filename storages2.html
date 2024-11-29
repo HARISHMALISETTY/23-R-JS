@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm" action="">
+      <input type="text" id="ip1" />
+      <input type="password" id="ip2" />
+      <input type="submit" />
+    </form>
+    <div id="div1"></div>
+    <script>
+      let form = document.getElementById("frm");
+      let ip1 = document.getElementById("ip1");
+      let ip2 = document.getElementById("ip2");
+      let div1 = document.getElementById("div1");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let userObj = { username: ip1.value, password: ip2.value };
+        localStorage.setItem("userDetails", JSON.stringify(userObj));
+        let existingData = localStorage.getItem("userDetails");
+        let parsedData = JSON.parse(existingData);
+        let p = document.createElement("p");
+        p.innerHTML = parsedData.username;
+        div1.appendChild(p);
+        document.body.appendChild(div1);
+      });
+
+      //   let username = "john";
+
+      //   let city = "hyd";
+
+      //   localStorage.setItem("uname", username);
+      //   localStorage.setItem("city", city);
+
+      // let uname=localStorage.getItem("username");
+      // let uname1=localStorage.getItem("uname")
+      // document.write(uname,uname1)
+
+      // localStorage.clear()
+
+      // let details={"name":"harish"};
+
+      // localStorage.setItem("info",details)
+
+      let arr = { a: 1, b: 2, c: 3 };
+
+      let op = JSON.stringify(arr);
+
+      //  document.write(op)
+
+      // let op=JSON.stringify(arr);
+
+      // console.log(op,"changed into string");
+
+      // let org=JSON.parse(op);
+
+      // console.log(org,"its orignal frmat")
+    </script>
+  </body>
+</html>
