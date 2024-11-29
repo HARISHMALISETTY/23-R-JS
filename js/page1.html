@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    page1
+
+    <button id="btn">go back</button>
+    <button id="pg2">page2</button>
+    
+    <script>
+
+        let btn=document.getElementById("btn");
+        let pg2=document.getElementById("pg2");
+
+        pg2.addEventListener("click",()=>{
+            location.assign("./page2.html")
+        })
+
+        btn.addEventListener("click",()=>{
+
+            history.back();
+        })
+    </script>
+</body>
+</html>
